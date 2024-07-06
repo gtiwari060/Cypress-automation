@@ -11,7 +11,7 @@ describe("Alias and invoke", () => {
         
     });
 
-    it("Validate Product thumbnail", () => {
+    it("Validate the Product thumbnail", () => {
         cy.visit("https://automationteststore.com/");
         cy.get('.thumbnail').as('productThumbnail')
         cy.get('@productThumbnail').should('have.length', 16)
