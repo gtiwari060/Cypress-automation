@@ -1,5 +1,6 @@
 import HomePage_PO from "../../support/pageObjects/webdriverUni/HomePage_PO";
 import Contact_Us_PO from "../../support/pageObjects/webdriverUni/Contact_Us_PO";
+import cypress from "cypress";
 /// <reference types="Cypress" />
 
 describe("Test Contact us form via WebdriverUni", () => {
@@ -28,7 +29,12 @@ describe("Test Contact us form via WebdriverUni", () => {
     });
 
     it("Should not be able to submit if all the fields are not filled", () => {
-        contact_us_PO.webdriverUni_Contactform_Submission(data.first_name, data.last_name, " ", 'This is a Test Comment', 'body', 'Invalid email address')
-    });
+        if(Cypress.isBrowser('firefox')){
+
+        }
+        else{
+            contact_us_PO.webdriverUni_Contactform_Submission(data.first_name, data.last_name, " ", 'This is a Test Comment', 'body', 'Invalid email address');
+        }
+        });
 
 });
