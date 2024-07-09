@@ -4,7 +4,7 @@
   "description": "cypress automation framework",
   "main": "index.js",
   "scripts": {
-    "triggerAllTests=headless": "npx cypress run",
+    "triggerAllTests-headless": "npx cypress run",
     "triggerAllTests-headed": "npx cypress run --headed",
     "triggerAllTests-chrome": "npx cypress run --browser chrome",
     "triggerAllTests-dashboard": "npx cypress run --record --key d30c9ced-a627-4b2e-bf28-bf119824de5c",
