@@ -3,7 +3,7 @@ import { before, Given, When, And, Then } from "cypress-cucumber-preprocessor/st
 Given('I can navigate to the Home page of the DepStudio', () => {
 
     cy.visit('https://gf-uset-dev-web01-fefffhgghqacatdu.eastus-01.azurewebsites.net/')
-    cy.get('.e-touch', {timeout : 30000})
+    cy.cget('.e-touch', {timeout : 30000})
 
     //cy,get('');
 })

@@ -53,5 +53,14 @@ Cypress.Commands.add("webdriverUni_Contactform_Submission", (firstName, lastName
     cy.get($selector).contains(texttolocate);
 })
 
+Cypress.Commands.add("ServiceLife_steps_accountnumtitle", () => {
+    cy.get('.e-list-item:first-of-type').invoke('text').then((text) => {
+          var splitText = text.split(' ')[0];
+          cy.log(splitText);
+    })
+})
+
+
+
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
