@@ -41,10 +41,13 @@ module.exports = defineConfig({
       runMode:0,
       openMode:0
     },
-     reporter: 'cypress-multi-reporters',
-  reporterOptions: {
-    configFile: 'reporter-config.json',
-  },
+   reporter: "mochawesome",
+    reporterOptions: {
+      reportDir: "cypress/reports/mochawesome",
+      overwrite: false,
+      html: false,
+      json: true
+    },
     env:{
       first_name: "Sarah",
       webdriveruni_url: "https://webdriveruniversity.com"
