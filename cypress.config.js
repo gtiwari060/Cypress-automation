@@ -38,7 +38,6 @@ module.exports = defineConfig({
 },
     specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx,feature}",
     excludeSpecPattern: "cypress/e2e/Ocuityai/*.js",
-    baseUrl: "https://webdriveruniversity.com",
     experimentalSessionandAndOrigin: "true",
     defaultCommandTimeout: 10000,
     pageLoadTimeout: 120000,
@@ -52,10 +51,5 @@ module.exports = defineConfig({
       runMode:0,
       openMode:0
     },
-   
-    env:{
-      first_name: "Sarah",
-      webdriveruni_url: "https://webdriveruniversity.com"
-    }
   },
 });
