@@ -6,6 +6,10 @@ pipeline{
         string(name: 'SPEC', defaultValue: "cypress/e2e/**/**", description: "Enter the script path you want to execute")
         choice(name: 'BROWSER', choices: ['chrome', 'edge', 'firefox'], description: "choose in which browser you want to execute your script")
     }
+
+    options{
+        ansiColor('xterm')
+    }
     
     stages{
         stage('Build'){
