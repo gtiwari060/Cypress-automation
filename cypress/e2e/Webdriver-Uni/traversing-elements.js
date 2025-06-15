@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+/// <reference types="cypress" />
 describe("Traversing DOM elements in Cypress", () => {
   beforeEach(() => {
     cy.visit("https://webdriveruniversity.com/");

@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+/// <reference types="cypress" />
 
 describe("Variables, cy commands and jquery commands", () =>{
     it("NAvigating to specific product pages", () =>

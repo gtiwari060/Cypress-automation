@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+/// <reference types="cypress" />
 
 describe('Login into Ocuity Application', () => {
     it('Should be able to login by entering valid credentials', () => {

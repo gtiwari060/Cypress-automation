@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+/// <reference types="cypress" />
 
 describe("Handling IFrame and Modals", () =>{
     it("Handle webdriveruni IFrame and Modals", () =>{

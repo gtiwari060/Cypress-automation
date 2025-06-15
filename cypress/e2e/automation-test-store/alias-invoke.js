@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+/// <reference types="cypress" />
 
 describe("Alias and invoke", () => {
     it("Validate a specific hair care product", () => {

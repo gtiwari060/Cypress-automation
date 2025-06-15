@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+/// <reference types="cypress" />
 
 describe("Iterate over elements in Automation test store", () => {
     beforeEach(function () {

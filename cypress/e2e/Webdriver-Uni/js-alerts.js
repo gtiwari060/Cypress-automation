@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+/// <reference types="cypress" />
 
 describe("Handle Js Alerts", () =>{
     it("Confirm js alerts contains the correct text", () =>{

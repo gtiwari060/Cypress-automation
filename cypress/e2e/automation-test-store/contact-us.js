@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+/// <reference types="cypress" />
 
 describe("Test Contact us form via Automation Test Store", () =>{
     before(function() {

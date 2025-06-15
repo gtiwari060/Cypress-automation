@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+/// <reference types="cypress" />
 
 describe("Validate Mouse Actions", () =>{
     it("Scroll element into view", () =>{

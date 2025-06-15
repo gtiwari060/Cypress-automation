@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+/// <reference types="cypress" />
 
 describe("Verify radiobuttons via Webdriver uni", () =>{
     before(function() {

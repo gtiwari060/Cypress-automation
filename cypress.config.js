@@ -17,23 +17,28 @@ function getConfigurationByFile(file) {
 
 module.exports = defineConfig({
   projectId: '2hr1g9',
+  reporter: 'cypress-mochawesome-reporter',
+  reporterOptions: {
+      reportDir: 'cypress/reports',
+      overwrite: true,
+      html: true,
+       charts: true,
+       reportPageTitle: 'My Test Suite',
+       embeddedScreenshots: true,
+       inlineAssets: true,
+       saveAllAttempts: false,
+     },
   e2e: {
     setupNodeEvents(on, config) {
       on('file:preprocessor', cucumber())
       // implement node event listeners here
-      const file = config.env.configFile || ''
-  return getConfigurationByFile(file)
+      const file = config.env.configFile || ''  
+      require('cypress-mochawesome-reporter/plugin')(on); 
+  return getConfigurationByFile(file)  
 },
     specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx,feature}",
     excludeSpecPattern: "cypress/e2e/Ocuityai/*.js",
     baseUrl: "https://webdriveruniversity.com",
-    reporter: "mochawesome",
-    reporterOptions: {
-      reportDir: "cypress/reports/mochawesome",
-      overwrite: false,
-      html: false,
-      json: true
-    },
     experimentalSessionandAndOrigin: "true",
     defaultCommandTimeout: 10000,
     pageLoadTimeout: 120000,

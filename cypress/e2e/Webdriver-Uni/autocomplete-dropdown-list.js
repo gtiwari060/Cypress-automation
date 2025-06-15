@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+/// <reference types="cypress" />
 
 describe("Interact with dropdown lists via Webdriver uni", () =>{
     it("Select specific values from dropdown list", () =>{

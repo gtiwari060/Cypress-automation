@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+/// <reference types="cypress" />
 
 describe('Upload files via Webdriveruni', () => {
     it('Upload a file ...', () => {

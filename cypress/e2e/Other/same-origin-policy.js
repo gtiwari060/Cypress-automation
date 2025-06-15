@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+/// <reference types="cypress" />
 
 describe("Same origin", () =>{
     it("Validate navigating two different urls", () =>{

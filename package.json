@@ -20,14 +20,15 @@
     "triggerAllTests-Staging": "npx cypress run --env configFile=staging",
     "cypress-multi-browser": "npm run triggerAllTests-webdriverUni -- --browser electron --headed & npm run triggerAllTests-webdriverUni -- --browser edge --headed",
     "test": "cypress run",
-  "posttest": "npx mochawesome-merge cypress/reports/mochawesome/*.json > cypress/reports/mochawesome/mochawesome.json && npx marge cypress/reports/mochawesome/mochawesome.json -f report -o cypress/reports/mochawesome"
-},
+    "posttest": "npx mochawesome-merge cypress/reports/mochawesome/*.json > cypress/reports/mochawesome/mochawesome.json && npx marge cypress/reports/mochawesome/mochawesome.json -f report -o cypress/reports/mochawesome"
+  },
   "author": "Gourav Tiwari",
   "license": "ISC",
   "devDependencies": {
     "@cypress/xpath": "^2.0.3",
-    "cypress": "^12.6.0",
+    "cypress": "^14.4.1",
     "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-mochawesome-reporter": "^3.8.2",
     "cypress-multi-reporters": "^1.6.4",
     "mocha-junit-reporter": "^2.2.1",
     "mochawesome": "^7.1.3",

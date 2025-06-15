@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+/// <reference types="cypress" />
 
 describe("Inspection Automation test store item using Chain of commands", () =>{
     it("Click on the first item using item header", () =>

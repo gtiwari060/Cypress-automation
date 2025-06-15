@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+/// <reference types="cypress" />
 
 describe("Validate Navigation", () =>{
     it("Validation navigating from different links", () =>{
