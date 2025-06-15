@@ -34,7 +34,7 @@ pipeline{
 
     post{
         always{
-            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, icon: '', keepAll: true, reportDir: 'report/', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, icon: '', keepAll: true, reportDir: 'C:/ProgramData/Jenkins/.jenkins/workspace/CypressPipeline/cypress/report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
         }
     }
 }
