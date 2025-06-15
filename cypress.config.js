@@ -23,11 +23,17 @@ module.exports = defineConfig({
       // implement node event listeners here
       const file = config.env.configFile || ''
   return getConfigurationByFile(file)
-
-    },
+},
     specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx,feature}",
     excludeSpecPattern: "cypress/e2e/Ocuityai/*.js",
     baseUrl: "https://webdriveruniversity.com",
+    reporter: "mochawesome",
+    reporterOptions: {
+      reportDir: "cypress/reports/mochawesome",
+      overwrite: false,
+      html: false,
+      json: true
+    },
     experimentalSessionandAndOrigin: "true",
     defaultCommandTimeout: 10000,
     pageLoadTimeout: 120000,
@@ -41,13 +47,7 @@ module.exports = defineConfig({
       runMode:0,
       openMode:0
     },
-   reporter: "mochawesome",
-    reporterOptions: {
-      reportDir: "cypress/reports/mochawesome",
-      overwrite: false,
-      html: false,
-      json: true
-    },
+   
     env:{
       first_name: "Sarah",
       webdriveruni_url: "https://webdriveruniversity.com"
