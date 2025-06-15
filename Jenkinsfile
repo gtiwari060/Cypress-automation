@@ -7,8 +7,8 @@ pipeline{
         choice(name: 'BROWSER', choices: ['chrome', 'edge', 'firefox'], description: "choose in which browser you want to execute your script")
     }
 
-    ansiColor('xterm') {
-    // some block
+    options{
+        ansiColor('xterm') 
 }
     
     stages{
