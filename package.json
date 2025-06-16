@@ -19,7 +19,8 @@
     "cypress-regression-pack": "npm run delete-results && npm run delete-mochawesome-report && npm run triggerAllTests=headless && npm run mochawesome-merge",
     "triggerAllTests-Staging": "npx cypress run --env configFile=staging",
     "cypress-multi-browser": "npm run triggerAllTests-webdriverUni -- --browser electron --headed & npm run triggerAllTests-webdriverUni -- --browser edge --headed",
-    "test": "cypress run",
+    "test": "npm run run || npm run posttest",
+    "run": "npx cypress run",
     "posttest": "npx mochawesome-merge cypress/reports/mochawesome/*.json > cypress/reports/mochawesome/mochawesome.json && npx marge cypress/reports/mochawesome/mochawesome.json -f report -o cypress/reports/mochawesome"
   },
   "author": "Gourav Tiwari",
