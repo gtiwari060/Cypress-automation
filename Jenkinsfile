@@ -23,18 +23,17 @@ pipeline{
                 bat "npm i"
                 bat "npx cypress run --browser ${BROWSER} --spec ${SPEC}"
             }
+            post{
+        always{
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, icon: '', keepAll: true, reportDir: '**/cypress/report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+        }
+    }
         }
 
         stage('Deploy'){
             steps{
             echo "Deploy the Application"
             }
-        }
-    }
-
-    post{
-        always{
-            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, icon: '', keepAll: true, reportDir: '**/cypress/report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
         }
     }
 }
